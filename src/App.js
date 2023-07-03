@@ -4,10 +4,10 @@ import { MINHA_CHAVE } from './minhaKey';
 
 function App() {
   const getName = () => {
-    console.log('Chave?', process.env.MINHA_KEY)
-    if (process.env.MINHA_KEY){
-      console.log(process.env.MINHA_KEY)
-      return process.env.MINHA_KEY
+    console.log('Chave?', process.env.REACT_APP_MINHA_KEY)
+    if (process.env.REACT_APP_MINHA_KEY){
+      console.log(process.env.REACT_APP_MINHA_KEY)
+      return process.env.REACT_APP_MINHA_KEY
     }
     else{
       console.log(MINHA_CHAVE)
@@ -27,7 +27,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React {`${process.env.REACT_APP_MINHA_KEY}`}
         </a>
       </header>
     </div>
