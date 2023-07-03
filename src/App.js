@@ -1,13 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { MINHA_CHAVE } from './minhaKey';
 
 function App() {
+  const getName = () => {
+    if (process.env.MINHA_KEY){
+      console.log(process.env.MINHA_KEY)
+      return process.env.MINHA_KEY
+    }
+    else{
+      console.log(MINHA_CHAVE)
+      return MINHA_CHAVE
+    }
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {getName()}
         </p>
         <a
           className="App-link"
